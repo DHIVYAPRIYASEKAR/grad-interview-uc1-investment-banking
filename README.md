@@ -37,26 +37,19 @@ answer.
 
 ---
 
-## 2. Getting Set Up: Fork, Clone, and Run Locally
+## 2. Getting Set Up:  Clone, and Run Locally
 
-### 2.1 Fork the repository
+### 2.1 Clone the repository
 
-1. Go to the repository: `https://github.com/jibin-pradeepkumar/grad-interview-uc1-investment-banking`.
-2. Click **Fork** (top right) and fork it into your own GitHub account.
-3. Clone **your fork** — not the upstream repo — to your machine:
+
 
    ```bash
-   git clone https://github.com/<your-github-username>/grad-interview-uc1-investment-banking.git
+   git clone https://github.com/jibin-pradeepkumar/grad-interview-uc1-investment-banking.git
    cd grad-interview-uc1-investment-banking
+   git checkout -b candidate/<your-name>
    ```
 
-4. Add the original repository as an `upstream` remote, so you can pull in
-   any updates the interviewer pushes later:
-
-   ```bash
-   git remote add upstream https://github.com/jibin-pradeepkumar/grad-interview-uc1-investment-banking.git
-   git remote -v
-   ```
+  Do all of your work on this branch, not on master — that keeps everyone's work separate and makes it easy for us to review yours specifically.
 
 ### 2.2 Prerequisites
 
@@ -341,15 +334,12 @@ naive `is_current = 1` join instead.
 
 ## 7. Submitting Your Answers
 
-All answer scripts go in a **new top-level folder in your fork**, named
-`answers/`, organized like this:
+All answer scripts go in a zipped folder named <yourfullname>.zip organized like this and to be sent via email:
 
 ```
-grad-interview-uc1-investment-banking/
-├── schema/                          (unchanged — do not edit)
-├── sql/                             (unchanged — do not edit)
-└── answers/
-    └── <your-github-username>/
+<yourfullname-email>
+└──grad-interview-uc1-investment-banking/
+   └── answers/
         ├── part_a/
         │   ├── q01_portfolio_value_usd.sql
         │   ├── q02_advisor_changes_2025.sql
@@ -371,7 +361,15 @@ grad-interview-uc1-investment-banking/
         │   ├── b2_portfolio_value_31aug2025.sql
         │   ├── b3_valuation_methodology_notes.md   (short written explanation, item 3 in Section 6)
         │   └── b4_usd_reporting_check.sql
-        └── README.md                                (your assumptions log, one line per question)
+        └── Notes-investment-banking.md                                (your assumptions log, one line per question)
+└──grad-interview-uc2-ecommerce/  
+   └── answers/
+        ├── part_a/
+        │   ├── ex01_get_revenue_by_region_foramonth.sql
+        │   ├── ex02_vw_region_revenue_report.sql
+        │   ├── ex03_sector_change_while_held.sql
+        │   └── ex04_fns_weekendoffercalendar.sql
+        └──Notes-ecommerce.md
 ```
 
 **Steps to submit:**
